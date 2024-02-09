@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPF_Lab_Work_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Lab_Work_4"
+        mc:Ignorable="d"
+        Title="Заметки" Height="600" Width="450" ResizeMode="NoResize">
+    <Grid>
+        <Menu Name="menu" Height="25" VerticalAlignment="Top" Background="White">
+            <MenuItem x:Name="b_color" Header="Цвет" Click="b_color_Click"></MenuItem>
+            <MenuItem x:Name="b_font" Header="Шрифт" Click="b_font_Click"></MenuItem>
+        </Menu>
+        <TextBox x:Name="text_box" HorizontalAlignment="Center" Height="549" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" AcceptsReturn="True" Margin="0,25,0,0"/>
+        <ComboBox x:Name="comboBox_color" SelectedIndex="0" Margin="40,0,252,534" SelectionChanged="comboBox_SelectionChanged">
+            <ComboBoxItem Content="White"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Green"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox_font" SelectedIndex="0" Margin="119,0,173,534" SelectionChanged="FontSizeComboBox_SelectionChanged">
+            <ComboBoxItem Content="12"/>
+            <ComboBoxItem Content="14"/>
+            <ComboBoxItem Content="16"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox_family" SelectedIndex="0" Margin="282,0,10,534" SelectionChanged="FontFamilyComboBox_SelectionChanged">
+            <ComboBoxItem Content="Arial"/>
+            <ComboBoxItem Content="Times New Roman"/>
+            <ComboBoxItem Content="Calibri"/>
+        </ComboBox>
+    </Grid>
+</Window>
